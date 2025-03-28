@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{FC818B05-6444-4EEC-95E6-306458242B93}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Alpata PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/kutayavci/Projects/Alpata/Alpata/Program.cs" relfile="Alpata/Program.cs" line="42" column="1" />
+      <Breakpoint file="/Users/kutayavci/Projects/Alpata/Alpata/API/Controllers/UserController.cs" relfile="Alpata/API/Controllers/UserController.cs" line="23" column="1" />
+      <Breakpoint file="/Users/kutayavci/Projects/Alpata/Alpata/API/Controllers/UserController.cs" relfile="Alpata/API/Controllers/UserController.cs" line="21" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Alpata/Entity/Meeting.cs">
+    <Files>
+      <File FileName="Alpata/Entity/Meeting.cs" Line="16" Column="23" />
+      <File FileName="Alpata/Entity/User.cs" />
+      <File FileName="Alpata/Program.cs" />
+      <File FileName="Alpata/Entity/AlpataAPIDbContext.cs" />
+      <File FileName="Alpata/API/Controllers/UserController.cs" />
+      <File FileName="Alpata/API/Business/UserManager.cs" />
+      <File FileName="Alpata/API/Business/Interfaces/IUserService.cs" />
+      <File FileName="Alpata/API/Business/CryptographyHelper.cs" />
+      <File FileName="Alpata/API/Business/Interfaces/ICryptographyHelper.cs" />
+      <File FileName="Alpata/API/Controllers/MeetingController.cs" />
+      <File FileName="Alpata/API/Business/MeetingManager.cs" />
+      <File FileName="Alpata/API/Business/Interfaces/IMeetingService.cs" />
+      <File FileName="Alpata/Model/Meeting/GetMeetingRequestDto.cs" />
+      <File FileName="Alpata/Properties/launchSettings.json" />
+      <File FileName="Alpata/API/Business/FileHelper.cs" />
+      <File FileName="Alpata/API/Business/Interfaces/IFileHelper.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Alpata">
+            <Node name="Alpata" expanded="True">
+              <Node name="Entity" expanded="True">
+                <Node name="Meeting.cs" selected="True" />
+              </Node>
+              <Node name="Model" expanded="True">
+                <Node name="User" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

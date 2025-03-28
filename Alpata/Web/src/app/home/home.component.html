@@ -1,0 +1,89 @@
+<div class="container">
+  <h1 class="mb-4">Meetings</h1>
+
+  <ul>
+    <li *ngFor="let meeting of meetings">
+      <div class="d-flex justify-content-between">
+        <div>
+          <h4>{{ meeting.name }}</h4>
+          <p>{{ meeting.startDate | date }} to {{ meeting.endDate | date }}</p>
+          <p>{{ meeting.description }}</p>
+        </div>
+        <div>
+          <button class="btn btn-primary" (click)="editMeeting(meeting)">
+            Edit
+          </button>
+          <button class="btn btn-danger" (click)="deleteMeeting(meeting.id)">
+            Delete
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h2 class="mt-4">{{ isEditing ? "Edit" : "Add" }} Meeting</h2>
+  <form (submit)="saveMeeting()">
+    <div class="form-group">
+      <label for="name">Meeting Name:</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        [(ngModel)]="currentMeeting.name"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="startDate">Start Date:</label>
+      <input
+        type="datetime-local"
+        id="startDate"
+        class="form-control"
+        [(ngModel)]="currentMeeting.startDate"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="endDate">End Date:</label>
+      <input
+        type="datetime-local"
+        id="endDate"
+        class="form-control"
+        [(ngModel)]="currentMeeting.endDate"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea
+        id="description"
+        class="form-control"
+        [(ngModel)]="currentMeeting.description"
+        [ngModelOptions]="{ standalone: true }"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="document">Document:</label>
+      <input
+        type="file"
+        id="document"
+        class="form-control"
+        (change)="onFileChange($event)"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-success">
+      {{ isEditing ? "Update" : "Add" }} Meeting
+    </button>
+    <button type="reset" class="btn btn-danger" (Click)="resetForm()">
+      Reset Meeting
+    </button>
+  </form>
+</div>

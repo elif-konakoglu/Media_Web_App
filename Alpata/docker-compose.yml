@@ -1,0 +1,26 @@
+﻿version: '3.9'
+
+services:
+  alpata-api:
+    image: alpata-api
+    container_name: alpata-api
+    environment:
+      - ASPNETCORE_URLS=https://+:443
+      - ASPNETCORE_HTTPS_PORT=443
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=alpata123 
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    ports:
+      - "7143:443"
+    volumes:
+      - ${HOME}/.aspnet/https:/https/
+    depends_on:
+      - sql-server  # If your application depends on a SQL Server container
+
+  sql-server:
+    image: mcr.microsoft.com/azure-sql-edge
+    container_name: mssql
+    environment:
+        SA_PASSWORD: reallyStrongPwd123
+        ACCEPT_EULA: Y
+    ports:
+        - "1433:1433"
